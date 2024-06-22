@@ -1,0 +1,31 @@
+<% include ./partials/header.ejs %>
+  <div class="w-full h-screen bg-zinc-300 bg-center bg-cover bg-[url(https://i.pinimg.com/originals/50/f9/4c/50f94c263a0b3f2d822cd92c1af5522d.jpg)] flex items-center justify-center">
+    <div class="w-[30vw] bg-white px-20 py-10 rounded-[30px] ">
+      <div class="h-20 w-full flex text-center justify-center bg-white">
+        <img class="bg-white" src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"   />
+      </div>
+
+      <h1 class="text-3xl text-center font-semibold text-zinc-700 tracking-tighter capitalize leading-none mt-2 bg-white"> Create New Account</h1>
+      <form action="/register" method="post" class="bg-white">
+        <input class="border-2 rounded-md block mt-5 w-full px-3 py-2 bg-white" type="text" name="username"
+          placeholder="Username" />
+        <input class="border-2 rounded-md block mt-5 w-full px-3 py-2 bg-white" type="text" name="fullname"
+          placeholder="Full name" />
+        <input class="border-2 rounded-md block mt-3 w-full px-3 py-2 bg-white" type="email" name="email"
+          placeholder="Email" />
+        <input class="border-2 rounded-md block mt-3 w-full px-3 py-2 bg-white" type="number" name="contact"
+          placeholder="contact" />
+        <input class="border-2 rounded-md block mt-3  w-full px-3 py-2 bg-white" type="password" name="password"
+          placeholder="Password" />
+        <input class="border-2  block mt-5  w-full px-3 py-2 bg-red-600 text-white rounded-full" type="submit"
+          value="Create New Account" />
+        <p class="text-xs font-semibold text-zinc-700 mt-7  max-auto text-center bg-white">
+          By continuing, you agree to Pinterest's
+          <b class="bg-white">Terms of Service, Privacy policy.</b>
+        </p>
+      </form>
+      <a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full bg-white" href="/">Login Existing Account</a>
+    </div>
+  </div>
+  <% include ./partials/footer.ejs %>
+
