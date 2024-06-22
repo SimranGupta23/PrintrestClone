@@ -10,7 +10,7 @@ passport.use(new localStrategy(userModel.authenticate()))
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { nav: false });
+  res.render('index', { nav: false ,error:req.flash('error')});
 });
 router.get('/register', function (req, res) {
   res.render('register', { nav: false });
@@ -78,7 +78,8 @@ router.get('/show/posts', isLoggedIn, async function (req, res, next) {
 
 router.post('/login', passport.authenticate("local", {
   successRedirect: "/profile",
-  failureRedirect: "/"
+  failureRedirect: "/",
+  failureFlash: true
 }), function (req, res) {
 
 });

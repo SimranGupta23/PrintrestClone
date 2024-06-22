@@ -8,6 +8,9 @@
 
       <h1 class="text-3xl text-center font-semibold text-zinc-700 tracking-tighter capitalize leading-none mt-2 bg-white"> Welcome to
         Printerest</h1>
+        <% if(error.length > 0) { %>
+          <p class="error bg-white text-red-700 font-semibold"><%= error %></p>
+       <% } %>
       <form action="/login" method="post" class="bg-white">
         <input class="border-2 rounded-md block mt-5 w-full px-3 py-2 bg-white" type="text" name="username"
           placeholder="Username" />
